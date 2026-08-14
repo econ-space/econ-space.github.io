@@ -1,1 +1,1 @@
-Sitemap: https://econ-gis.github.io/sitemap.xml
+Sitemap: https://econ-space.github.io/sitemap.xml

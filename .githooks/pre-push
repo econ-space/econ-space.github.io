@@ -1,0 +1,54 @@
+#!/bin/sh
+
+set -eu
+
+expected_name="econ-space"
+expected_email="215001386+econ-space@users.noreply.github.com"
+legacy_email="taka.jp.ch@gmail.com"
+expected_remote="git@github-econ-space:econ-space/econ-space.github.io.git"
+zero_oid="0000000000000000000000000000000000000000"
+
+actual_name=$(git config --get user.name || true)
+actual_email=$(git config --get user.email || true)
+actual_remote=$(git config --get remote.origin.url || true)
+
+if [ "$actual_name" != "$expected_name" ] || [ "$actual_email" != "$expected_email" ]; then
+  printf '%s\n' "Push blocked: this repository is not using the econ-space commit identity." >&2
+  exit 1
+fi
+
+if [ "$actual_remote" != "$expected_remote" ] || [ "${2:-}" != "$expected_remote" ]; then
+  printf '%s\n' "Push blocked: origin is not the dedicated econ-space SSH remote." >&2
+  exit 1
+fi
+
+auth_output=$(ssh -o BatchMode=yes -T git@github-econ-space 2>&1 || true)
+case "$auth_output" in
+  *"Hi econ-space!"*) ;;
+  *)
+    printf '%s\n' "Push blocked: github-econ-space did not authenticate as econ-space." >&2
+    printf '%s\n' "$auth_output" >&2
+    exit 1
+    ;;
+esac
+
+while read -r local_ref local_oid remote_ref remote_oid; do
+  [ "$local_oid" = "$zero_oid" ] && continue
+
+  if [ "$remote_oid" = "$zero_oid" ]; then
+    commits=$(git rev-list "$local_oid" --not --remotes="$1")
+  else
+    commits=$(git rev-list "$remote_oid..$local_oid")
+  fi
+
+  for commit in $commits; do
+    commit_email=$(git show -s --format=%ae "$commit")
+    case "$commit_email" in
+      "$expected_email"|"$legacy_email") ;;
+      *)
+        printf '%s\n' "Push blocked: commit $commit uses unexpected author email '$commit_email'." >&2
+        exit 1
+        ;;
+    esac
+  done
+done

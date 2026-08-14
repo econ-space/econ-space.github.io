@@ -27,4 +27,4 @@ comments: false
 A blog by a PhD student in Economics based in Switzerland <br> 
 日本人経済学博士(PhD)課程のブログ based in スイス
 
-I enjoy hiking, skiing, and running. Check out my favorite gear **[here](outdoor_gear.qmd)**.
+I enjoy hiking, skiing, and running.

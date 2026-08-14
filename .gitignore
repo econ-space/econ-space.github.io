@@ -5,3 +5,7 @@
 .DS_Store
 
 /.quarto/
+/site_libs/
+/index_files/
+
+**/*.quarto_ipynb
