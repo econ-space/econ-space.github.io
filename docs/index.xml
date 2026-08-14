@@ -6,14 +6,14 @@
       version="2.0">
 <channel>
 <title>c.q. blog</title>
-<link>https://econ-gis.github.io/</link>
-<atom:link href="https://econ-gis.github.io/index.xml" rel="self" type="application/rss+xml"/>
+<link>https://econ-space.github.io/</link>
+<atom:link href="https://econ-space.github.io/index.xml" rel="self" type="application/rss+xml"/>
 <description>A blog by a Japanese PhD student in Economics based in Switzerland | スイスで経済学PhDを目指す日本人のブログ</description>
-<generator>quarto-1.5.57</generator>
+<generator>quarto-1.9.35</generator>
 <lastBuildDate>Thu, 01 Jan 2026 23:00:00 GMT</lastBuildDate>
 <item>
   <title>Reflections on 2025 and Resolutions for 2026: My 2nd and 3rd Year as a PhD Student</title>
-  <link>https://econ-gis.github.io/posts/2026/0102_this_year/</link>
+  <link>https://econ-space.github.io/posts/2026/0102_this_year/</link>
   <description><![CDATA[ 
 
 
@@ -72,12 +72,12 @@
  ]]></description>
   <category>life</category>
   <category>research</category>
-  <guid>https://econ-gis.github.io/posts/2026/0102_this_year/</guid>
+  <guid>https://econ-space.github.io/posts/2026/0102_this_year/</guid>
   <pubDate>Thu, 01 Jan 2026 23:00:00 GMT</pubDate>
 </item>
 <item>
   <title>One economist’s wisdom</title>
-  <link>https://econ-gis.github.io/posts/2025/0620_rubinstein_lost_student/</link>
+  <link>https://econ-space.github.io/posts/2025/0620_rubinstein_lost_student/</link>
   <description><![CDATA[ 
 
 
@@ -111,12 +111,12 @@ Thanks for reading this far.<br>
  ]]></description>
   <category>life</category>
   <category>research</category>
-  <guid>https://econ-gis.github.io/posts/2025/0620_rubinstein_lost_student/</guid>
+  <guid>https://econ-space.github.io/posts/2025/0620_rubinstein_lost_student/</guid>
   <pubDate>Thu, 19 Jun 2025 22:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Complain not to complain</title>
-  <link>https://econ-gis.github.io/posts/2025/0619_complain/</link>
+  <link>https://econ-space.github.io/posts/2025/0619_complain/</link>
   <description><![CDATA[ 
 
 
@@ -140,12 +140,12 @@ Thanks for reading this far.<br>
 
  ]]></description>
   <category>life</category>
-  <guid>https://econ-gis.github.io/posts/2025/0619_complain/</guid>
+  <guid>https://econ-space.github.io/posts/2025/0619_complain/</guid>
   <pubDate>Wed, 18 Jun 2025 22:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Nobody cites my paper</title>
-  <link>https://econ-gis.github.io/posts/2025/0607_citation/</link>
+  <link>https://econ-space.github.io/posts/2025/0607_citation/</link>
   <description><![CDATA[ 
 
 
@@ -160,12 +160,12 @@ Thanks for reading this far.<br>
 
  ]]></description>
   <category>research</category>
-  <guid>https://econ-gis.github.io/posts/2025/0607_citation/</guid>
+  <guid>https://econ-space.github.io/posts/2025/0607_citation/</guid>
   <pubDate>Fri, 06 Jun 2025 22:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Starting a blog</title>
-  <link>https://econ-gis.github.io/posts/2025/0605_starting_blog/</link>
+  <link>https://econ-space.github.io/posts/2025/0605_starting_blog/</link>
   <description><![CDATA[ 
 
 
@@ -198,7 +198,7 @@ Thanks for reading this far.<br>
 
  ]]></description>
   <category>news</category>
-  <guid>https://econ-gis.github.io/posts/2025/0605_starting_blog/</guid>
+  <guid>https://econ-space.github.io/posts/2025/0605_starting_blog/</guid>
   <pubDate>Wed, 04 Jun 2025 22:00:00 GMT</pubDate>
 </item>
 </channel>

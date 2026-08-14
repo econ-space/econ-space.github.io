@@ -2,7 +2,7 @@
 
 **スイス**で**経済学PhD(博士)課程**をしている日本人のブログです
 
-👉 Visit the blog: [https://econ-gis.github.io/](https://econ-gis.github.io/)
+👉 Visit the blog: [https://econ-space.github.io/](https://econ-space.github.io/)
 
 - 海外、ヨーロッパ、スイスのPhD学生のリアルが気になる人はcheck out!
 - 研究から日常生活、大学院の情報までいろいろ書いています
