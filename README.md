@@ -6,7 +6,7 @@
 
 - 海外、ヨーロッパ、スイスのPhD学生のリアルが気になる人はcheck out!
 - 研究から日常生活、大学院の情報までいろいろ書いています
-- 関心は環境経済学と開発経済学
+- 関心は環境経済学、都市/空間経済学、開発経済学
 - 現在は因果推論とプロジェクトマネジメントを修士課程の学生に教えています (TAで受け持つ授業の一部)
 
 This blog is written by a Japanese economics PhD student based in Switzerland.   
