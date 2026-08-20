@@ -10,7 +10,13 @@ website:
   twitter-card: true
   # draft-mode: unlinked
   navbar:
-    left: []
+    left:
+      - href: about/index.qmd
+        text: "about"
+      - href: gear/index.qmd
+        text: "gear"
+      - href: gallery/index.qmd
+        text: "photo gallery"
   search: true
 
 format:

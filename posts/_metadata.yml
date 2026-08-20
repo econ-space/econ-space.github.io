@@ -8,3 +8,4 @@ execute:
 toc: true
 toc-title: "Table of Contents"
 toc-location: right
+body-classes: "blog-post"

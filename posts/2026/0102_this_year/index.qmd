@@ -1,13 +1,11 @@
 ---
-title: "Reflections on 2025 and Resolutions for 2026: My 2nd and 3rd Year as a PhD Student"
+title: "Reflections on 2025 and Resolutions for 2026"
 date: "2026-01-02"
 description: "What I aim to achieve in the 2nd and 3rd year of my PhD"
 categories: 
   - life
   - research
 ---
-
-\
 
 ## Reflections on 2025
 
@@ -51,4 +49,3 @@ Throughout the year (especially from September to December), I gained a better u
 
 - Write at least 10 blog posts (covering research, life, career, and other topics; roughly once a month)
 - Publish 2--3 technical posts on my website
-

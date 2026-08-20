@@ -7,8 +7,6 @@ description: "Why I started this blog, what it's about, and what to expect"
 categories: [news]
 ---
 
-\
-
 ## Why write?
 
 I enjoy writing short texts every day. <br>
@@ -32,4 +30,3 @@ Topics will likely orbit around:
 
 If you find something useful here, great. <br>
 If not, that's fine too.
-

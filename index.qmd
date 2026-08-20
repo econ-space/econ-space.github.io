@@ -6,9 +6,9 @@ listing:
   contents: posts
   sort: "date desc"
   type: default
+  date-format: "YYYY-MM-DD"
   categories: true
   sort-ui: false
-  filter-ui: true
   feed: true
   # - id: posts_2026
   #   contents: "2026/**/index.qmd"
@@ -21,6 +21,7 @@ listing:
 page-layout: full
 title-block-banner: false
 comments: false
+include-after-body: js/archive.html
 ---
 
 \

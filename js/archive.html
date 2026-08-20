@@ -1,0 +1,66 @@
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const sidebar = document.querySelector("#quarto-margin-sidebar");
+  const posts = Array.from(document.querySelectorAll(".quarto-listing-default .quarto-post"));
+
+  if (!sidebar || posts.length === 0) return;
+
+  const archive = new Map();
+
+  posts.forEach((post) => {
+    const date = post.querySelector(".listing-date")?.textContent.trim();
+    const match = date?.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+    if (!match) return;
+
+    const [, year, month] = match;
+    const monthId = `archive-${year}-${month}`;
+    const months = archive.get(year) || new Map();
+    const entry = months.get(month) || { count: 0, id: monthId };
+
+    entry.count += 1;
+    months.set(month, entry);
+    archive.set(year, months);
+
+    if (entry.count === 1) post.id = monthId;
+  });
+
+  if (archive.size === 0) return;
+
+  const section = document.createElement("section");
+  section.className = "quarto-listing-archive";
+
+  const title = document.createElement("h5");
+  title.className = "quarto-listing-archive-title";
+  title.textContent = "Archives";
+  section.appendChild(title);
+
+  archive.forEach((months, year) => {
+    const yearLabel = document.createElement("div");
+    yearLabel.className = "quarto-listing-archive-year";
+    yearLabel.textContent = year;
+    section.appendChild(yearLabel);
+
+    const monthList = document.createElement("ul");
+    monthList.className = "quarto-listing-archive-months";
+
+    months.forEach(({ count, id }, month) => {
+      const item = document.createElement("li");
+      const link = document.createElement("a");
+      link.href = `#${id}`;
+      link.textContent = new Intl.DateTimeFormat("en", { month: "long" })
+        .format(new Date(2000, Number(month) - 1, 1));
+
+      const countLabel = document.createElement("span");
+      countLabel.className = "quarto-archive-count";
+      countLabel.textContent = ` (${count})`;
+
+      item.append(link, countLabel);
+      monthList.appendChild(item);
+    });
+
+    section.appendChild(monthList);
+  });
+
+  sidebar.appendChild(section);
+});
+</script>

@@ -1,10 +1,13 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Handjet:wght@200&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 
 $navbar-bg: #853d25;
-$font-family-base: 'Montserrat', sans-serif;
+$font-family-base: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 $success: #ed4e0d;
+$grid-body-width: 735px;
+$grid-sidebar-width: 220px;
+$grid-margin-width: 220px;
 
 $retro: 'Handjet', cursive;
 
@@ -31,8 +34,4 @@ p.subtitle.lead {
 nav.navbar.navbar-expand-lg {
   padding-top: 8px;
   padding-bottom: 8px;
-}
-
-.navbar-toggler {
-  display: none !important;
 }
