@@ -8,6 +8,12 @@ lightbox: true
 
 ::: {.photo-gallery}
 
+![Oeschinensee, Switzerland · 2026](images/2026-oeschinensee-3.jpg){group="photo-gallery" loading="lazy" fig-alt="Oeschinensee, Switzerland"}
+
+![Oeschinensee, Switzerland · 2026](images/2026-oeschinensee-1.jpg){group="photo-gallery" loading="lazy" fig-alt="Oeschinensee, Switzerland"}
+
+![Oeschinensee, Switzerland · 2026](images/2026-oeschinensee-2.jpg){group="photo-gallery" loading="lazy" fig-alt="Oeschinensee, Switzerland"}
+
 ![Paris, France · 2025](images/2025-paris.jpg){group="photo-gallery" loading="lazy" fig-alt="Paris, France"}
 
 ![Oeschinensee, Switzerland · 2025](images/2025-oeschinensee.jpg){group="photo-gallery" loading="lazy" fig-alt="Oeschinensee, Switzerland"}

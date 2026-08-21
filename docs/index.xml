@@ -28,10 +28,13 @@
 </section>
 <section id="resolutions-for-2026" class="level2">
 <h2 class="anchored" data-anchor-id="resolutions-for-2026">Resolutions for 2026</h2>
+<section id="progress-tracking" class="level3">
+<h3 class="anchored" data-anchor-id="progress-tracking">Progress Tracking</h3>
 <ul>
 <li>Review this post monthly to track my progress</li>
-<li>Manage and monitor my progress using a Gantt chart</li>
+<li>Manage and monitor my progress</li>
 </ul>
+</section>
 <section id="research" class="level3">
 <h3 class="anchored" data-anchor-id="research">Research</h3>
 <ul>
@@ -44,13 +47,6 @@
 <section id="personalcareer" class="level3">
 <h3 class="anchored" data-anchor-id="personalcareer">Personal/Career</h3>
 <ul>
-<li>Improve English skills
-<ul>
-<li>Dedicate 15 to 60 minutes every day to study</li>
-<li>Attend Toastmasters meetings whenever my schedule permits</li>
-<li>Use AI tools effectively to enhance my learning process</li>
-</ul></li>
-<li>Prepare for interviews (general)</li>
 <li>Improve time management (especially for research)</li>
 <li>Go to bed by 11 pm and wake up at 5 am every day</li>
 <li>Go running twice a week</li>
@@ -82,7 +78,7 @@
 
 
 
-<p>Lately, my motivation hasn’t been particularly high. A mix of ongoing issues and various annoying commitments has been wearing me down. And, unfortunately, I don’t really have anyone in this city I can talk to casually or spontaneously, either (my spouse is currently in Japan). That said, I’m still working on my R&amp;R with my coauthors and continuing to study a theoretical (econometric) topic I’m currently into.</p>
+<p>Lately, my motivation hasn’t been particularly high. A mix of ongoing issues and various annoying commitments has been wearing me down. And, unfortunately, I don’t really have anyone in this city I can talk to spontaneously, either (my spouse is currently in Japan). That said, I’m still working on my R&amp;R with my coauthors and continuing to study a theoretical (econometric) topic I’m currently into.</p>
 <p>Every time I hit a low point, and I remember this article, I go back and read it. It always gives me a lift. The paragraph below is from Rubinstein (2013), a rather unusual and personal article where he responds to ten questions aimed at helping “lost” graduate students in economics. I find this particular answer both grounding and moving. It’s one of those things I come back to when I need to remind myself what a rare opportunity I’ve been given, and how how fortunate I am to have it.</p>
 <blockquote class="blockquote">
 <p><strong>Q10. Finally, do you have anything serious to say?</strong></p>
@@ -92,11 +88,8 @@
 </blockquote>
 <p>Ariel Rubinstein is an Israeli economist.</p>
 <p>Given the current circumstances, and the fact that I have an Israeli friend here, it’s hard not to feel heartache when I think about what many people are going through right now.</p>
-<p>Thanks for reading this far.<br>
-(∗ ˊωˋ ∗)</p>
-<blockquote class="blockquote">
+<p>Thanks for reading this far.</p>
 <p>Rubinstein, A. (2013). 10 Q&amp;A: Experienced Advice for “Lost” Graduate Students in Economics. The Journal of Economic Education, 44(3), 193–196. https://doi.org/10.1080/00220485.2013.795448</p>
-</blockquote>
 
 
 
@@ -105,33 +98,6 @@
   <category>research</category>
   <guid>https://econ-space.github.io/posts/2025/0620_rubinstein_lost_student/</guid>
   <pubDate>Thu, 19 Jun 2025 22:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Complain not to complain</title>
-  <link>https://econ-space.github.io/posts/2025/0619_complain/</link>
-  <description><![CDATA[ 
-
-
-
-
-<p>Lately, I’ve been feeling a bit uncomfortable in my work environment.</p>
-<p>Let me start by acknowledging that this post might sound like a complaint in itself. That’s not my intention. I just want to think through this quietly.</p>
-<p>There’s someone around me who complains about something almost every few hours. What makes me uncomfortable is not just the frequency, but the nature of the complaints. Usually, they’re not about things that cause real problems, reduce anyone’s welfare, or make our work environment worse. Instead, they tend to be cultural frustrations—things that are simply different from what they’re used to. A common phrase is something like, “That’s not how we do it in my country,” followed by “That’s crazy” or “I hate it.” The tone feels too harsh to me, and I’m not used to that kind of reaction. To me, it just seems like a lack of openness to difference.</p>
-<p>Of course, I complain sometimes too. But I try to stay aware of it and keep it in check. I try to be mindful of when and how I express frustration. As far as I know, I don’t complain like that in front of non-Japanese people, at least, and I don’t initiate those kinds of conversations. If someone asks, I might say something like, “Yeah, I miss clean toilets and good seafood.” That sort of thing.</p>
-<p>This person also tends to react emotionally, even to small things. They get upset or overwhelmed quickly. It makes it hard to respond with kindness. Maybe I don’t have to. I’m not sure. But by nature, I can’t completely ignore it—unless I decide to stop talking to them altogether, which feels like a last resort.</p>
-<p>People often say that you become the average of the five people around you. It’s not easy to control who you spend time with, especially when you’re living in a foreign country and doing a PhD.</p>
-<p>I don’t feel contaminated yet, but I’m uncomfortable being in an environment where that could happen, quietly, and without me even noticing. It’s not just emotional discomfort; it’s the possibility of gradually absorbing a way of thinking, speaking, or relating to others that I don’t want to make my own. Just like how spending too much time around unhealthy friendships can slowly shift your mindset, I don’t want to let myself drift in that direction.</p>
-<p>At the same time, I know that in western cultures, people are often encouraged to express their needs or preferences more directly than in Japan. Still, I don’t feel it’s my place to tell someone to complain less. That doesn’t feel like my role. If I truly cared about this person, I would probably speak up. But I don’t think I do in this case.</p>
-<p>Even if I’m right in thinking that “constantly complaining is not ideal for social life,” I don’t feel motivated to invest my energy in trying to help them change.</p>
-<p>Thanks for reading this far.<br>
-(∗ ˊωˋ ∗)</p>
-
-
-
- ]]></description>
-  <category>life</category>
-  <guid>https://econ-space.github.io/posts/2025/0619_complain/</guid>
-  <pubDate>Wed, 18 Jun 2025 22:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Nobody cites my paper</title>
