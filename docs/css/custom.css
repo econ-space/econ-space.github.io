@@ -3,17 +3,165 @@
    Typography: Headings & Text
 ================================== */
 
+:root {
+  --paper: #F6F5F0;
+  --line: #BAC7B7;
+  --line-soft: #D7E0D5;
+  --blue-ink: #2E452F;
+  --blue-mid: #5C7A5C;
+  --text: #1E241C;
+  --text-soft: #5E6B5C;
+  --rust: #B5573A;
+  --card: #FFFFFF;
+}
+
+html,
+body {
+  background-color: var(--paper);
+}
+
+body {
+  color: var(--text);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+body::before {
+  position: fixed;
+  z-index: 0;
+  inset: 0;
+  pointer-events: none;
+  content: "";
+  background-image:
+    linear-gradient(var(--line-soft) 0.5px, transparent 0.5px),
+    linear-gradient(90deg, var(--line-soft) 0.5px, transparent 0.5px);
+  background-size: 32px 32px;
+  opacity: 0.55;
+}
+
+body > * {
+  position: relative;
+  z-index: 1;
+}
+
+.navbar,
+.quarto-title-banner,
+.page-columns,
+#quarto-content {
+  background-color: transparent;
+}
+
+.navbar-brand,
+.navbar-nav .nav-link,
+.quarto-title-meta-heading,
+.listing-date,
+.sidebar nav[role="doc-toc"] > h2,
+.sidebar nav[role="doc-toc"] ul > li > a {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.navbar-brand,
+.navbar-nav .nav-link {
+  font-size: 0.8125rem;
+  font-weight: 400;
+  color: var(--text-soft);
+}
+
+.navbar-brand:hover,
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: var(--rust);
+}
+
+/*
+ * One shared layout grid for the navbar and every page type. Quarto normally
+ * assigns different grid columns to article, full-width, and section pages.
+ */
+@media (min-width: 992px) {
+  #quarto-content.page-columns,
+  nav.navbar {
+    display: grid;
+    grid-template-columns:
+      [screen-start] minmax(1.5rem, 1fr)
+      [page-start body-start body-content-start] minmax(500px, 735px)
+      [body-content-end body-end] 44px
+      [sidebar-start] minmax(0, 220px)
+      [page-end] minmax(1.5rem, 1fr)
+      [screen-end];
+  }
+
+  #quarto-content.page-columns > main.content {
+    grid-column: body-content-start / body-content-end !important;
+  }
+
+  body.photo-gallery-page #quarto-content.page-columns > main.content {
+    grid-column: body-content-start / page-end !important;
+  }
+
+  #quarto-content.page-columns > #quarto-margin-sidebar {
+    grid-column: sidebar-start / page-end !important;
+  }
+
+  nav.navbar > .navbar-container {
+    grid-column: body-content-start / page-end;
+    width: 100%;
+    max-width: none;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 991.98px) {
+  nav.navbar > .navbar-container {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+}
+
+a {
+  color: var(--blue-ink);
+  text-underline-offset: 0.16em;
+}
+
+a:hover {
+  color: var(--rust);
+}
+
+main.content p a:not(.lightbox):not(.glightbox),
+main.content li a:not(.lightbox):not(.glightbox) {
+  color: var(--blue-ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--rust);
+}
+
+main.content p a:not(.lightbox):not(.glightbox):hover,
+main.content li a:not(.lightbox):not(.glightbox):hover {
+  color: var(--rust);
+}
+
 h1 {
-  font-size: 1.95em; /* default ~2.5em */
+  color: var(--blue-ink);
+  font-size: clamp(2.1875rem, 6vw, 3rem);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
 }
 
 h2 {
-  font-size: 1.45em; /* default ~2em */
+  color: var(--blue-ink);
+  font-size: 1.1875rem;
+  font-weight: 600;
+  line-height: 1.55;
   margin-top: 50px;
 }
 
 h3 {
-  font-size: 1.15em; /* default ~1.75em */
+  color: var(--blue-ink);
+  font-size: 1rem;
+  font-weight: 600;
   margin-top: 20px;
 }
 
@@ -69,7 +217,8 @@ main.content {
   margin: 0;
   font-size: 0.86rem;
   white-space: nowrap;
-  color: #6c757d;
+  color: var(--text-soft);
+  font-family: 'IBM Plex Mono', monospace;
 }
 
 .quarto-listing-default .quarto-post .body {
@@ -110,12 +259,13 @@ main.content {
 .quarto-listing-default .quarto-post .listing-categories .listing-category {
   margin: 0;
   padding: 0.02rem 0.3rem;
-  border: 1px solid rgba(0, 0, 0, 0.16);
+  border: 0.5px solid var(--line);
   border-radius: 999px;
   font-size: 0.68rem;
   line-height: 1.3;
   text-transform: lowercase;
-  color: #6c757d;
+  color: var(--blue-mid);
+  font-family: 'IBM Plex Mono', monospace;
 }
 
 /* Time archive, added below Quarto's category filter. */
@@ -127,11 +277,17 @@ main.content {
 .quarto-listing-archive-title {
   margin: 0 0 0.45rem;
   padding-bottom: 0.35rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.14);
-  font-family: inherit;
-  font-size: 1rem;
+  border-bottom: 0.5px solid var(--line);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.8125rem;
   line-height: 1.5;
-  font-weight: 700 !important;
+  font-weight: 400 !important;
+}
+
+#quarto-margin-sidebar .quarto-listing-category-title,
+#quarto-margin-sidebar .quarto-listing-archive-title {
+  font-size: 0.8125rem;
+  font-weight: 400 !important;
 }
 
 .quarto-listing-archive-year {
@@ -143,6 +299,33 @@ main.content {
 .quarto-listing-category,
 .quarto-listing-archive {
   font-family: inherit;
+  font-size: 0.8125rem;
+  font-weight: 300;
+}
+
+#quarto-margin-sidebar .quarto-listing-category,
+#quarto-margin-sidebar .quarto-listing-archive,
+#quarto-margin-sidebar .quarto-listing-category .category.active {
+  font-size: 0.8125rem;
+  font-weight: 300;
+}
+
+#quarto-margin-sidebar nav[role="doc-toc"] > h2 {
+  margin: 0 0 0.45rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 0.5px solid var(--line);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+#quarto-margin-sidebar nav[role="doc-toc"] ul > li > a,
+#quarto-margin-sidebar nav[role="doc-toc"] ul > li > a.active {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 300;
+  line-height: 1.5;
 }
 
 .quarto-listing-archive-months {
@@ -165,7 +348,7 @@ main.content {
 }
 
 .quarto-archive-count {
-  color: #6c757d;
+  color: var(--text-soft);
 }
 
 @media (max-width: 767.98px) {
@@ -200,7 +383,7 @@ main.content {
 
 .photo-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 1.6rem 1rem;
   margin-top: 2rem;
 }
@@ -227,7 +410,8 @@ main.content {
 
 .photo-gallery figcaption {
   margin-top: 0.45rem;
-  color: #6c757d;
+  color: var(--text-soft);
+  font-family: 'IBM Plex Mono', monospace;
   font-size: 0.83rem;
   line-height: 1.35;
 }
