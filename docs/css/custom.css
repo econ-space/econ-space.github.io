@@ -15,6 +15,12 @@
   --card: #FFFFFF;
 }
 
+@media (min-width: 992px) {
+  html {
+    scrollbar-gutter: stable;
+  }
+}
+
 html,
 body {
   background-color: var(--paper);
