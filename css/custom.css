@@ -166,6 +166,8 @@ h3 {
 }
 
 main.content {
+  /* Match the personal site's effective body size: 17px × 0.875. */
+  font-size: 0.9296875rem;
   margin-top: 1rem;
 }
 
@@ -215,7 +217,7 @@ main.content {
   grid-column: 1;
   grid-row: 1;
   margin: 0;
-  font-size: 0.86rem;
+  font-size: 0.9296875rem;
   white-space: nowrap;
   color: var(--text-soft);
   font-family: 'IBM Plex Mono', monospace;
@@ -233,7 +235,7 @@ main.content {
 
 .quarto-listing-default .quarto-post .listing-title {
   margin: 0;
-  font-size: 1rem;
+  font-size: 0.9296875rem;
   line-height: 1.35;
   font-weight: 400;
 }
@@ -266,6 +268,10 @@ main.content {
   text-transform: lowercase;
   color: var(--blue-mid);
   font-family: 'IBM Plex Mono', monospace;
+}
+
+.quarto-title .quarto-categories .quarto-category {
+  text-transform: lowercase;
 }
 
 /* Time archive, added below Quarto's category filter. */
@@ -359,11 +365,11 @@ main.content {
   }
 
   .quarto-listing-default .quarto-post .metadata {
-    font-size: 0.8rem;
+    font-size: 0.9296875rem;
   }
 
   .quarto-listing-default .quarto-post .listing-title {
-    font-size: 0.95rem;
+    font-size: 0.9296875rem;
   }
 
   .quarto-listing-default .quarto-post .body {
