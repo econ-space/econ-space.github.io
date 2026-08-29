@@ -66,8 +66,6 @@ nav.navbar {
   min-height: 3.68rem;
 }
 
-.navbar-brand,
-.navbar-nav .nav-link,
 .quarto-title-meta-heading,
 .listing-date,
 .sidebar nav[role="doc-toc"] > h2,
@@ -77,8 +75,9 @@ nav.navbar {
 
 .navbar-brand,
 .navbar-nav .nav-link {
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 0.8125rem;
-  font-weight: 400;
+  font-weight: 300;
   color: var(--text-soft);
 }
 
