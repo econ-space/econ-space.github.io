@@ -413,17 +413,41 @@ main.content {
   list-style: none;
 }
 
+.quarto-listing-archive-all {
+  padding-left: 0;
+}
+
 .quarto-listing-archive-months li {
   margin: 0.1rem 0;
 }
 
-.quarto-listing-archive a {
+.quarto-listing-archive a,
+.quarto-archive-filter {
   color: inherit;
   text-decoration: none;
 }
 
-.quarto-listing-archive a:hover {
+.quarto-archive-filter {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.quarto-listing-archive a:hover,
+.quarto-archive-filter:hover,
+.quarto-archive-filter.active {
+  color: var(--rust);
   text-decoration: underline;
+  text-decoration-color: var(--rust);
+  text-underline-offset: 0.16em;
+}
+
+.quarto-archive-filter:focus-visible {
+  outline: 1px solid var(--rust);
+  outline-offset: 2px;
 }
 
 .quarto-archive-count {

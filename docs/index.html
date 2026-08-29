@@ -334,10 +334,12 @@ My friend’s paper, published in 2023, has already been cited over 20 times.
 document.addEventListener("DOMContentLoaded", () => {
   const sidebar = document.querySelector("#quarto-margin-sidebar");
   const posts = Array.from(document.querySelectorAll(".quarto-listing-default .quarto-post"));
+  const listing = window["quarto-listings"]?.["listing-listing"];
 
-  if (!sidebar || posts.length === 0) return;
+  if (!sidebar || posts.length === 0 || !listing) return;
 
   const archive = new Map();
+  let activeMonth = "";
 
   posts.forEach((post) => {
     const date = post.querySelector(".listing-date")?.textContent.trim();
@@ -345,15 +347,13 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!match) return;
 
     const [, year, month] = match;
-    const monthId = `archive-${year}-${month}`;
     const months = archive.get(year) || new Map();
-    const entry = months.get(month) || { count: 0, id: monthId };
+    const entry = months.get(month) || { count: 0 };
 
     entry.count += 1;
     months.set(month, entry);
     archive.set(year, months);
-
-    if (entry.count === 1) post.id = monthId;
+    post.dataset.archiveMonth = `${year}-${month}`;
   });
 
   if (archive.size === 0) return;
@@ -366,6 +366,26 @@ document.addEventListener("DOMContentLoaded", () => {
   title.textContent = "Archives";
   section.appendChild(title);
 
+  const allList = document.createElement("ul");
+  allList.className = "quarto-listing-archive-months quarto-listing-archive-all";
+
+  const allItem = document.createElement("li");
+  const allButton = document.createElement("button");
+  allButton.type = "button";
+  allButton.className = "quarto-archive-filter active";
+  allButton.dataset.archiveMonth = "";
+  allButton.setAttribute("aria-pressed", "true");
+  allButton.textContent = "All dates";
+
+  const allCount = document.createElement("span");
+  allCount.className = "quarto-archive-count";
+  allCount.textContent = ` (${posts.length})`;
+
+  allButton.appendChild(allCount);
+  allItem.appendChild(allButton);
+  allList.appendChild(allItem);
+  section.appendChild(allList);
+
   archive.forEach((months, year) => {
     const yearLabel = document.createElement("div");
     yearLabel.className = "quarto-listing-archive-year";
@@ -375,18 +395,22 @@ document.addEventListener("DOMContentLoaded", () => {
     const monthList = document.createElement("ul");
     monthList.className = "quarto-listing-archive-months";
 
-    months.forEach(({ count, id }, month) => {
+    months.forEach(({ count }, month) => {
       const item = document.createElement("li");
-      const link = document.createElement("a");
-      link.href = `#${id}`;
-      link.textContent = new Intl.DateTimeFormat("en", { month: "long" })
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "quarto-archive-filter";
+      button.dataset.archiveMonth = `${year}-${month}`;
+      button.setAttribute("aria-pressed", "false");
+      button.textContent = new Intl.DateTimeFormat("en", { month: "long" })
         .format(new Date(2000, Number(month) - 1, 1));
 
       const countLabel = document.createElement("span");
       countLabel.className = "quarto-archive-count";
       countLabel.textContent = ` (${count})`;
 
-      item.append(link, countLabel);
+      button.appendChild(countLabel);
+      item.appendChild(button);
       monthList.appendChild(item);
     });
 
@@ -394,6 +418,56 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   sidebar.appendChild(section);
+
+  const decodeCategory = (value) => {
+    if (!value) return "";
+    return decodeURIComponent(atob(value));
+  };
+
+  const applyCombinedFilter = () => {
+    const activeCategory = document
+      .querySelector(".quarto-listing-category .category.active")
+      ?.getAttribute("data-category") || "";
+    const category = decodeCategory(activeCategory);
+
+    listing.filter((item) => {
+      const values = item.values();
+      const dateMatches = !activeMonth || item.elm?.dataset.archiveMonth === activeMonth;
+      const categories = decodeCategory(values.categories).split(",");
+      const categoryMatches = !category || categories.includes(category);
+      return dateMatches && categoryMatches;
+    });
+  };
+
+  const selectMonth = (month) => {
+    activeMonth = month;
+
+    section.querySelectorAll(".quarto-archive-filter").forEach((button) => {
+      const isActive = button.dataset.archiveMonth === activeMonth;
+      button.classList.toggle("active", isActive);
+      button.setAttribute("aria-pressed", String(isActive));
+    });
+
+    applyCombinedFilter();
+  };
+
+  section.addEventListener("click", (event) => {
+    const button = event.target.closest(".quarto-archive-filter");
+    if (!button) return;
+    selectMonth(button.dataset.archiveMonth || "");
+  });
+
+  document.addEventListener("click", (event) => {
+    if (event.target.closest(
+      ".quarto-listing-category, .quarto-listing-category-title, .listing-category"
+    )) {
+      setTimeout(applyCombinedFilter, 0);
+    }
+  });
+
+  window.addEventListener("hashchange", () => {
+    setTimeout(applyCombinedFilter, 0);
+  });
 });
 </script>
 <script id="quarto-html-after-body" type="application/javascript">
