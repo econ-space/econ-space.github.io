@@ -13,6 +13,7 @@
   --text-soft: #5E6B5C;
   --rust: #B5573A;
   --card: #FFFFFF;
+  --site-edge-padding: 1.5rem;
 }
 
 @media (min-width: 992px) {
@@ -99,8 +100,17 @@ body > * {
       [screen-end];
   }
 
-  #quarto-content.page-columns > main.content {
+  #quarto-content.page-columns > main.content,
+  #quarto-content.page-columns > main.content.column-page,
+  #quarto-content.page-columns > main.content.column-page-left,
+  #quarto-content.page-columns > main.content.column-page-right,
+  #quarto-content.page-columns.page-layout-full > main.content,
+  #quarto-content.page-columns.page-layout-article > main.content {
     grid-column: body-content-start / body-content-end !important;
+    width: 100%;
+    max-width: none;
+    margin-right: 0;
+    margin-left: 0;
   }
 
   body.photo-gallery-page #quarto-content.page-columns > main.content {
@@ -118,12 +128,58 @@ body > * {
     padding-right: 0;
     padding-left: 0;
   }
+
+  nav.navbar {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
 }
 
 @media (max-width: 991.98px) {
+  #quarto-content.page-columns {
+    display: grid;
+    grid-template-columns:
+      [screen-start] var(--site-edge-padding)
+      [page-start body-start body-content-start] minmax(0, 1fr)
+      [body-content-end body-end page-end] var(--site-edge-padding)
+      [screen-end];
+  }
+
+  nav.navbar {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+
   nav.navbar > .navbar-container {
-    padding-right: 1.5rem;
-    padding-left: 1.5rem;
+    width: 100%;
+    max-width: none;
+    padding-right: var(--site-edge-padding);
+    padding-left: var(--site-edge-padding);
+  }
+
+  nav.navbar > .navbar-container > .navbar-brand-container {
+    order: 1 !important;
+    margin-right: auto !important;
+    margin-left: 0 !important;
+  }
+
+  nav.navbar > .navbar-container > .navbar-toggler {
+    order: 3 !important;
+    margin-right: 0;
+    margin-left: auto;
+  }
+
+  #quarto-content.page-columns > main.content,
+  #quarto-content.page-columns > main.content.column-page,
+  #quarto-content.page-columns > main.content.column-page-left,
+  #quarto-content.page-columns > main.content.column-page-right,
+  #quarto-content.page-columns.page-layout-full > main.content,
+  #quarto-content.page-columns.page-layout-article > main.content {
+    grid-column: body-content-start / body-content-end !important;
+    width: auto;
+    max-width: none;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
   }
 }
 
