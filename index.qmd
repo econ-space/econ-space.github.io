@@ -1,6 +1,5 @@
 ---
-title: "coordinates & questions"
-subtitle: "in low-resolution thoughts"
+title: "econ-space"
 # keywords: ["経済学 海外 PhD", "海外大学院 留学", "スイス 博士課程", "スイス 経済学 博士", "スイス 経済学 PhD", "ヨーロッパ 経済学 博士", "ヨーロッパ 経済学 PhD", "海外 PhD 進学"]
 listing:
   contents: posts

@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "c.q. blog"
+  title: "econ-space"
   site-url: https://econ-space.github.io/
   description: "A blog by a Japanese PhD student in Economics based in Switzerland | スイスで経済学PhDを目指す日本人のブログ"
   open-graph: true
