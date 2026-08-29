@@ -318,6 +318,7 @@ main.content {
 
 .quarto-listing-default .quarto-post .listing-title a:hover {
   text-decoration: underline;
+  text-decoration-color: var(--rust);
   text-underline-offset: 0.16em;
 }
 

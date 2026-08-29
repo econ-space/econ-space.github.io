@@ -22,13 +22,13 @@ lightbox: true
 
 ![Lake Tahoe, USA · 2018](images/2018-tahoe.jpg){group="photo-gallery" loading="lazy" fig-alt="Lake Tahoe, USA"}
 
-![Death Valley, California, USA · 2018](images/2018-death-valley-2.jpg){group="photo-gallery" loading="lazy" fig-alt="Death Valley, California, USA"}
+![Death Valley, USA · 2018](images/2018-death-valley-2.jpg){group="photo-gallery" loading="lazy" fig-alt="Death Valley, USA"}
 
-![Death Valley, California, USA · 2018](images/2018-death-valley-1.jpg){group="photo-gallery" loading="lazy" fig-alt="Death Valley, California, USA"}
+![Death Valley, USA · 2018](images/2018-death-valley-1.jpg){group="photo-gallery" loading="lazy" fig-alt="Death Valley, USA"}
 
-![California, USA · 2018](images/2018-california.jpg){group="photo-gallery" loading="lazy" fig-alt="California, USA"}
+![On the way to Death Valley, USA · 2018](images/2018-california.jpg){group="photo-gallery" loading="lazy" fig-alt="On the way to Death Valley, USA"}
 
-![Yosemite National Park, California, USA · 2018](images/2018-yosemite.jpg){group="photo-gallery" loading="lazy" fig-alt="Yosemite National Park, California, USA"}
+![Yosemite National Park, USA · 2018](images/2018-yosemite.jpg){group="photo-gallery" loading="lazy" fig-alt="Yosemite National Park, USA"}
 
 ![Taipei, Taiwan · 2017](images/2017-taipei.jpg){group="photo-gallery" loading="lazy" fig-alt="Taipei, Taiwan"}
 
