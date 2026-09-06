@@ -1,0 +1,26 @@
+<script>
+// Isolate Japanese title runs so optical stroke correction never affects Handjet.
+(() => {
+  const title = document.querySelector('#title-block-header h1.title');
+  if (!title) return;
+  const walker = document.createTreeWalker(title, NodeFilter.SHOW_TEXT);
+  const nodes = [];
+  while (walker.nextNode()) nodes.push(walker.currentNode);
+  const japanese = /([\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}\u3000-\u303f\uff01-\uff60\uffe0-\uffee]+)/u;
+  for (const node of nodes) {
+    const parts = node.textContent.split(japanese);
+    if (parts.length === 1) continue;
+    const fragment = document.createDocumentFragment();
+    parts.forEach((part, index) => {
+      if (index % 2 === 0) fragment.append(document.createTextNode(part));
+      else {
+        const span = document.createElement('span');
+        span.className = 'title-ja';
+        span.textContent = part;
+        fragment.append(span);
+      }
+    });
+    node.replaceWith(fragment);
+  }
+})();
+</script>

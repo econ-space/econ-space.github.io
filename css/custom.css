@@ -3,6 +3,24 @@
    Typography: Headings & Text
 ================================== */
 
+/* Scale only the Japanese fallback to match Handjet's smaller visible glyphs.
+   This reduces both glyph dimensions and stroke thickness, leaving Latin intact. */
+@font-face {
+  font-family: 'Title Japanese';
+  src: url('fonts/DotGothic16-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  size-adjust: 75%;
+}
+
+/* DotGothic16 has one weight. A narrow background-colored outline trims
+   its visible strokes; only Japanese title runs receive this treatment. */
+#title-block-header .title .title-ja {
+  -webkit-text-stroke: 0.4px var(--paper);
+  paint-order: fill stroke;
+}
+
 :root {
   --paper: #F6F5F0;
   --line: #BAC7B7;
@@ -184,6 +202,33 @@ nav.navbar {
     max-width: none;
     margin-right: 0 !important;
     margin-left: 0 !important;
+  }
+}
+
+/* Margin notes add nested page grids. Share the outer grid so the article
+   keeps the same body width and alignment as pages without margin notes. */
+#quarto-content.page-columns > main.content.page-columns {
+  grid-column: screen-start / screen-end !important;
+  grid-template-columns: subgrid;
+  min-width: 0;
+}
+
+#quarto-content main.content.page-columns .page-columns {
+  grid-template-columns: subgrid;
+  min-width: 0;
+}
+
+@media (min-width: 992px) {
+  #quarto-content main.content .column-margin {
+    grid-column: sidebar-start / page-end !important;
+  }
+}
+
+@media (max-width: 991.98px) {
+  #quarto-content main.content .column-margin {
+    grid-column: body-content-start / body-content-end !important;
+    height: auto;
+    overflow: visible;
   }
 }
 
