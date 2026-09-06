@@ -176,6 +176,7 @@ ul.task-list li input[type="checkbox"] {
 <script>
 // Isolate Japanese title runs so optical stroke correction never affects Handjet.
 (() => {
+  if (document.body.classList.contains('blog-post')) return;
   const title = document.querySelector('#title-block-header h1.title');
   if (!title) return;
   const walker = document.createTreeWalker(title, NodeFilter.SHOW_TEXT);
