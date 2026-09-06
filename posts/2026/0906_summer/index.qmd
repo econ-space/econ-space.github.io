@@ -18,11 +18,11 @@ categories:
 
 
 ::: {layout-ncol=3}
-![](images/IMG_7056.jpg){fig-alt="リスボン滞在中の写真1"}
+![](images/IMG_6458.jpg){fig-alt="リスボン滞在中の写真1"}
 
-![](images/IMG_7085.jpg){fig-alt="リスボン滞在中の写真2"}
+![](images/IMG_6466.jpg){fig-alt="リスボン滞在中の写真2"}
 
-![](images/IMG_7089.jpg){fig-alt="リスボン滞在中の写真3"}
+![](images/IMG_6512.jpg){fig-alt="リスボン滞在中の写真3"}
 :::
 
 ## 数量空間モデルの Summer School 
@@ -37,11 +37,11 @@ QSMはざっくり言えば貿易・都市・空間経済学で発展してき�
 
 
 ::: {layout-ncol=3}
-![](images/IMG_6458.jpg){fig-alt="スペイン滞在中の写真1"}
+![](images/IMG_7056.jpg){fig-alt="スペイン滞在中の写真1"}
 
-![](images/IMG_6466.jpg){fig-alt="スペイン滞在中の写真2"}
+![](images/IMG_7085.jpg){fig-alt="スペイン滞在中の写真2"}
 
-![](images/IMG_6512.jpg){fig-alt="スペイン滞在中の写真3"}
+![](images/IMG_7089.jpg){fig-alt="スペイン滞在中の写真3"}
 :::
 
 ## PhD学生の研究費・お金事情
