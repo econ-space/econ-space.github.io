@@ -269,13 +269,9 @@ h2 {
   margin-top: 50px;
 }
 
-/* Tighten section breaks in posts, preserving a heading directly after the title. */
+/* Use the same heading spacing throughout posts. */
 body.blog-post main.content > section.level2 > h2 {
   margin-top: 32px;
-}
-
-body.blog-post main.content > header + section.level2 > h2 {
-  margin-top: 50px;
 }
 
 h3 {
@@ -617,7 +613,12 @@ body.blog-post #title-block-header.quarto-title-block.default .quarto-title .tit
 }
 
 body.blog-post #title-block-header.quarto-title-block.default {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Match the title-to-heading gap to a paragraph's 1rem bottom margin. */
+body.blog-post #title-block-header .quarto-title-meta-contents p.date {
+  margin-bottom: 0;
 }
 
 body.section-page #title-block-header.quarto-title-block.default .quarto-title .title {
