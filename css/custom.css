@@ -269,6 +269,15 @@ h2 {
   margin-top: 50px;
 }
 
+/* Tighten section breaks in posts, preserving a heading directly after the title. */
+body.blog-post main.content > section.level2 > h2 {
+  margin-top: 32px;
+}
+
+body.blog-post main.content > header + section.level2 > h2 {
+  margin-top: 50px;
+}
+
 h3 {
   color: var(--blue-ink);
   font-size: 1rem;
