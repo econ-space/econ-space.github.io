@@ -271,7 +271,7 @@ h2 {
 
 /* Use the same heading spacing throughout posts. */
 body.blog-post main.content > section.level2 > h2 {
-  margin-top: 32px;
+  margin-top: 30px;
 }
 
 h3 {
